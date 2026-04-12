@@ -1,5 +1,5 @@
 """
-src/nlp/stage02_validate_case.py - Validate Stage
+src/nlp/stage02_validate_karlidean.py - Validate Stage
 (EDIT YOUR COPY OF THIS FILE)
 
 Source: Raw HTML string
