@@ -272,10 +272,10 @@ def run_transform(
     LOG.info(f"Calculated author count: {author_count}")
 
     # Calculate derived field: count of the word "the" in abstract
-    the_count: int = (
-        abstract.lower().split().count("the") if abstract != "unknown" else 0
+    cluster_count: int = (
+        abstract.lower().split().count("clusters") if abstract != "unknown" else 0
     )
-    LOG.info(f"Calculated 'the' count: {the_count}")
+    LOG.info(f"Calculated 'the' count: {cluster_count}")
 
     LOG.info("========================")
     LOG.info("STAGE 03f: Build record and create DataFrame")
@@ -290,7 +290,7 @@ def run_transform(
         "abstract": abstract,
         "abstract_word_count": abstract_word_count,
         "author_count": author_count,
-        "the_count": the_count,
+        "cluster_count": cluster_count,
     }
 
     df = pd.DataFrame([record])
